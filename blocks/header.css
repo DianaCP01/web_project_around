@@ -1,0 +1,133 @@
+.header {
+    max-width: 880px;
+    height: 100%;
+    max-height: 120px;
+    top: 42px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.header__image {
+    max-width: 120px;
+    width: 100%;
+    max-height: 120px;
+    padding-top: 40px; /* Espacio superior */
+    margin-right: 30px; /* Espacio entre imagen y perfil */
+}
+
+.header__profile {
+    display: flex;
+    flex-direction: column; /* Alinear elementos en columna */
+    justify-content: center; /* Centrar verticalmente */
+}
+
+.header__name-container {
+    display: flex; /* Alinear nombre y botón en una sola fila */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.header__name {
+    font-size: 42px;
+    max-width: 373px;
+    width: auto; /* Permitir que el nombre use el espacio necesario */
+    height: 39px;
+    line-height: 48px;
+    text-align: left; /* Alinear a la izquierda */
+    font-family: 'Inter';
+    font-weight: 500;
+    color: #FFFFFF;
+    margin-right: 18px; /* Espacio entre el nombre y el botón */
+}
+
+.header__edit-profile {
+    background: none; /* Sin fondo */
+    border: 2px solid #FFFFFF;
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.icon {
+    width: 10px;
+    height: 10px;
+}
+
+.header__subtitle {
+    max-width: 415px;
+    width: 100%;
+    font-size: 30px; /* Unificado tamaño de fuente */
+    font-family: "Inter";
+    line-height: 36px; /* Ajuste a un solo line-height */
+    margin: 0; /* Eliminar márgenes */
+    font-weight: 400; 
+    text-align: left; /* Alinear a la izquierda */
+    color: #FFFFFF;   
+}
+
+.header__add-profile {
+    width: 150px; /* Ancho del botón rectangular */
+    height: 50px; /* Alto del botón */
+    margin-left: auto; /* Alinear a la derecha */
+    display: flex; /* Asegura que el contenido se centre */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    background-color: transparent; /* Color de fondo del botón */
+    color: #FFFFFF; /* Color del texto */
+    border: 2px solid #FFFFFF; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-size: 24px; /* Tamaño del texto en el botón */
+    transition: background-color 0.3s; /* Transición para efecto hover */
+
+}
+
+/* resolución mobile */
+@media screen and (max-width: 550px) {
+    .header {
+        flex-direction: column; /* Cambiar a columna */
+        align-items: center; /* Centrar todos los elementos */
+        max-height: none; /* Permitir altura automática */
+        top: 45px;
+        
+    }
+
+    .header__image {
+        max-width: 120px; /* Reducir tamaño de la imagen */
+        max-height: 120px;
+        margin: 0; /* Eliminar margen */
+        flex-direction: column; /* Cambiar a columna */
+        align-items: center; /* Centrar todos los elementos */
+        max-height: none; /* Permitir altura automática */
+        padding: 0; /* Eliminar padding del contenedor */
+        
+    }
+
+    .header__profile {
+        display: flex;
+        flex-direction: column; /* Colocar en columna */
+        align-items: center; /* Centrar contenido */
+        text-align: center; /* Centrar texto */
+        margin-bottom: 10px; /* Espacio entre perfil y botón */
+    }
+
+    .header__name {
+        font-size: 28px; /* Reducir tamaño de fuente */
+        line-height: 34px; /* Ajustar line-height */
+    }
+
+    .header__subtitle {
+        font-size: 18px; /* Reducir tamaño de fuente */
+        line-height: 17px; /* Ajustar line-height */
+        text-align: center;
+    }
+
+    .header__add-profile {
+        width: 282px; /* Botón ocupa todo el ancho */
+        height: 40px; /* Ajustar altura del botón */
+        font-size: 20px; /* Reducir tamaño de fuente */
+        margin: 36px 0; /* Añadir margen arriba y abajo */
+    }
+
+    .heart-button {
+        width: 30px; /* Ajustar tamaño del botón de corazón */
+        height: 30px; /* Ajustar tamaño del botón de corazón */
+}
+}

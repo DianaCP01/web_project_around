@@ -1,0 +1,327 @@
+.popup {
+    display: none; /* Oculta el cuadro por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    justify-content: center;
+    align-items: center;
+}
+
+.popup_opened {
+    display: flex; /* Muestra el cuadro emergente */
+}
+
+.popup__container {
+  position: relative; /* Necesario para que el botón de cerrar se posicione en relación a este contenedor */
+  background: white;
+  max-width: 430px;
+  width: 100%; /* Ancho del contenedor */
+  height: 330px; /* Alto del contenedor */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column; /* Alinea los elementos en columna */
+  justify-content: space-between; /* Espacia los elementos dentro del contenedor */
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #FFFFFF;
+    margin: 0 auto;
+   }
+
+   .close-button .icon {
+    display: flex;
+    max-width: 40px; /* Ajusta el tamaño del ícono si es necesario */
+    width: 100%;
+    height: 40px; /* Ajusta el tamaño del ícono si es necesario */
+    margin-top: 240px;
+    margin-right: 670px;
+   }
+
+   h2 {
+    text-align: left; /* Justifica el título a la izquierda */
+    font-family: 'Inter', sans-serif; /* Asegúrate de que la fuente Inter esté disponible */
+    font-weight: 900; /* Peso de la fuente */
+    font-size: 24px; /* Tamaño de la fuente */
+    line-height: 29.05px; /* Altura de la línea */
+    max-width: 330px;
+    width: 100%;
+    height: 23px;
+    margin-left: 36px;
+    margin-top: 34px;
+    font-size: 24px;
+    font-weight: 900px;
+    font-family: 'inter';
+ 
+}
+
+.name-container {
+ width: 358px; /* Ancho del contenedor */
+ height: 27.26px; /* Alto del contenedor */
+ border: 1px solid #000; /* Borde de 1px */
+ position: relative; /* Para posicionar elementos dentro */
+ margin-top: 0px; /* Espacio entre la etiqueta y el contenedor */
+}
+
+input {
+ max-width: 358px;
+ width: 100%; /* Ocupa todo el ancho del contenedor */
+ height: 27px; /* Ocupa toda la altura del contenedor */
+ font-size: 14px;
+ font-family: 'inter';
+ font-weight: 400px;
+ color: #C4C4C4;   ;
+ border: none;
+ border-bottom: 1px solid #C4C4C4; /* Línea inferior gris */
+ outline: none; /* Sin borde al hacer clic */
+ margin-left: 36px;
+}
+
+label[for="name"] {
+ width: 358px; /* Ancho de la etiqueta */
+ height: 14px; /* Altura de la etiqueta */
+ top: 306px; /* Posición desde la parte superior */
+ left: 460px; /* Posición desde la izquierda */
+ gap: 0px; /* Espaciado */
+ opacity: 1; /* Visible por defecto */
+ font-family: 'Inter', sans-serif; /* Fuente */
+ font-size: 14px; /* Tamaño de la fuente */
+ font-weight: 400; /* Peso de la fuente */
+ line-height: 16.94px; /* Altura de línea */
+ text-align: left; /* Alineación del texto */
+ position: relative; /* Necesario para aplicar top y left */
+ margin-top: 5px; /* Espacio entre la etiqueta y el contenedor */
+ font-family: 'Inter';
+}
+
+input::placeholder {
+ color: #888; /* Color del texto del placeholder */
+ opacity: 1; /* Asegura que el placeholder sea visible */
+}
+
+textarea::placeholder {
+ color: #888; /* Color del texto del placeholder */
+ opacity: 1; /* Asegura que el placeholder sea visible */
+ 
+}
+
+textarea {
+ color: #C4C4C4; /* Color del texto del placeholder */
+ opacity: 1; /* Asegura que el placeholder sea visible */
+ max-width: 358px;
+ width: 100%;
+ max-height: 27px;
+ font-size: 14px;
+ font-weight: 400px;
+ font-family: 'inter';
+ margin-left: 36px;
+ border: none;
+ border-bottom: 1px solid #C4C4C4;
+ resize: none; /* Elimina la capacidad de redimensionar */
+ 
+}
+
+.heart-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.heart-button  {
+    background: none;
+    border: none;
+    cursor: pointer;
+    max-width: 21px;
+    width: auto;
+    max-height: 19px;
+    display: flex; /* Para centrar el icono */
+    align-items: center; /* Centra verticalmente el icono */
+    justify-content: center; /* Centra horizontalmente el icono */
+    padding: 0; /* Elimina el padding */
+    }
+
+.heart-icon {
+    transition: filter 0.3s;
+}
+
+/* Estado activo (me gusta) */
+.heart-button.active .heart-icon {
+    filter: brightness(0);
+}
+
+#saveButton {
+    max-width: 358px;
+    width: 100%;
+    max-height: 50px;
+    background-color: white; /* Fondo negro */
+    color: #C4C4C4; /* Texto blanco */
+    border: 1px solid #C4C4C4;
+    padding: 10px 20px; /* Espaciado interno */
+    cursor: pointer; /* Cambiar el cursor al pasar el ratón */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+    font-family: 'inter';
+    font-size: 18px;
+    font-weight: 400px;
+    margin-left: 36px;
+    margin-bottom: 36px;
+ }
+
+ #saveButton:hover {
+    background-color: black; /* Color al pasar el ratón (opcional) */
+ }
+
+/* resolución mobile */
+@media screen and (max-width: 550px) {
+
+    .heart-button {
+        max-width: 21px;
+        width: 100%;
+        max-height: 19px;
+        margin: auto;
+     }
+
+     #saveButton {
+        max-width: 238px; /* Cambiado a 238px */
+        width: 100%; /* Mantener ocupando el 100% del contenedor */
+        height: 46px; /* Cambiado a 26px */
+        background-color: white; /* Fondo blanco */
+        color: #C4C4C4; /* Texto en color gris claro */
+        border: 1px solid #C4C4C4; /* Borde gris claro */
+        padding: 0; /* Sin padding para ajustarlo mejor */
+        cursor: pointer; /* Cambiar el cursor al pasar el ratón */
+        transition: background-color 0.3s; /* Transición suave para el color de fondo */
+        font-family: 'inter';
+        font-size: 14px; /* Ajustar el tamaño de la fuente si es necesario */
+        font-weight: 400; /* Peso de la fuente */
+        margin-left: 22px;
+        margin-bottom: 25px; /* Mantener el margen inferior */
+    }
+
+    .popup {
+        width: 100%; /* Ocupar el ancho total en móviles */
+        height: 100%; /* Ocupar el alto total en móviles */
+        display: flex; /* Asegura que se mantenga el flex */
+        justify-content: center; /* Centra horizontalmente */
+        align-items: flex-start; /* Alinea al inicio verticalmente */
+     }
+
+     .popup__container {
+        width: 282px; /* Mantener ancho específico */
+        height: 322px; /* Mantener alto específico */
+        margin-top: 123px; /* Mantener margen superior */
+        margin-left: auto; /* Centro automático para alineación */
+        margin-right: auto; /* Centro automático para alineación */
+        padding: 22px; /* Espaciado interno */
+        position: relative; /* Asegura que se vea */
+     }
+
+     .name-container {
+        width: 238px; /* Ancho del contenedor */
+        height: 26px; /* Alto del contenedor */
+        border: 1px solid #000; /* Borde de 1px */
+        position: relative; /* Para posicionar elementos dentro */
+        margin-top: 0px; /* Espacio entre la etiqueta y el contenedor */
+     }
+     
+     input {
+        max-width: 238px;
+        width: 100%; /* Ocupa todo el ancho del contenedor */
+        height: 26px; /* Ocupa toda la altura del contenedor */
+        font-size: 14px;
+        font-family: 'inter';
+        font-weight: 400px;
+        color:#000000;  
+        border: none;
+        border-bottom: 1px solid #C4C4C4; /* Línea inferior gris */
+        outline: none; /* Sin borde al hacer clic */
+        margin-left: 22px;
+     }
+     
+     textarea {
+        color:#000000; /* Color del texto del placeholder */
+        opacity: 1; /* Asegura que el placeholder sea visible */
+        max-width: 238px;
+        width: 100%;
+        max-height: 26px;
+        font-size: 14px;
+        font-weight: 400px;
+        font-family: 'inter';
+        margin-left: 22px;
+        border: none;
+        border-bottom: 1px solid #C4C4C4;
+        resize: none; /* Elimina la capacidad de redimensionar */    
+     }
+
+     #saveButton {
+        max-width: 238px; /* Cambiado a 238px */
+        width: 100%; /* Mantener ocupando el 100% del contenedor */
+        height: 46px; /* Cambiado a 26px */
+        background-color: white; /* Fondo blanco */
+        color: #C4C4C4; /* Texto en color gris claro */
+        border: 1px solid #C4C4C4; /* Borde gris claro */
+        padding: 0; /* Sin padding para ajustarlo mejor */
+        cursor: pointer; /* Cambiar el cursor al pasar el ratón */
+        transition: background-color 0.3s; /* Transición suave para el color de fondo */
+        font-family: 'inter';
+        font-size: 14px; /* Ajustar el tamaño de la fuente si es necesario */
+        font-weight: 400; /* Peso de la fuente */
+        margin-left: 22px;
+        margin-bottom: 25px; /* Mantener el margen inferior */
+     }
+     
+     h2 {
+        text-align: left; /* Justifica el título a la izquierda */
+        font-family: 'Inter', sans-serif; /* Asegúrate de que la fuente Inter esté disponible */
+        font-weight: 900; /* Peso de la fuente */
+        font-size: 24px; /* Tamaño de la fuente */
+        line-height: 22px; /* Altura de la línea */
+        max-width: 330px;
+        width: 100%;
+        height: 23px;
+        margin-left: 22px;
+        margin-top: 34px;
+        font-size: 18px;
+        font-weight: 900px;
+        font-family: 'inter';
+     }
+     
+     .close-button {
+        align-items: center;
+        right: 10px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        color: #FFFFFF;
+        margin: 0 auto;
+       }
+       
+     .close-button .icon {
+        display: flex;
+        flex-direction: column;
+        max-width: 26px; /* Ajusta el tamaño del ícono si es necesario */
+        width: 100%;
+        height: 26px; /* Ajusta el tamaño del ícono si es necesario */
+        margin: 0 auto;
+        margin-top: 73px;
+        margin-right: 25px;
+     
+       }
+     
+
+     
+     
+     
+     
+}
+
+ 
+   

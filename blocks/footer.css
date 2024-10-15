@@ -1,0 +1,28 @@
+
+.footer {
+    max-width: 880px;
+    width: 100%;
+    max-height: 18px;
+    padding-top: 67px;
+    padding-bottom: 60px;
+    font-family: 'Inter', sans-serif; /* Fuente especificada */
+    font-size: 18px; /* Tamaño de fuente */
+    font-weight: 400; /* Peso de fuente */
+    line-height: 16px;
+    color: #545454; 
+    align-items: center;
+    margin: 0 auto;
+
+}
+
+@media screen and (max-width: 550px) {
+  .footer {
+    max-width: 282px;
+    width: 100%;
+    max-height: 14px;
+    margin-bottom: 36px;
+  }
+}
+
+  
+

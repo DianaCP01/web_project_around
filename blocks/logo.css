@@ -1,0 +1,25 @@
+.logo {
+    width: 880px;
+    height: 74px;
+    margin: auto;
+    padding-top: 45px;
+      
+}
+
+
+@media screen and (max-width: 550px) {
+    .logo {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        max-width: 320px; /* Ancho máximo del logo */
+        height: 56px; /* Mantiene la proporción */
+        margin: auto; /* Centra el contenedor */
+        padding-top: 28px; /* Espacio en la parte superior */
+    }
+    
+    .logo img {
+        width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+        height: auto; /* Mantiene la proporción de la imagen */
+        max-width: 320px; /* Asegura que no sea más grande que 320px */
+        max-height: 56px; /* Limita la altura a 56px */
+    }
+}
